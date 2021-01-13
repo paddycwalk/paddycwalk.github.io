@@ -27,8 +27,3 @@ const meineKonstante = 'Meine Konstante';
 
 // 
 let meineZahl = 711;
-
-const
-
-
-
