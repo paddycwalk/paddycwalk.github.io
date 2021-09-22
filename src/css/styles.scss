@@ -1,0 +1,50 @@
+@import url("https://fonts.googleapis.com/css2?family=Lato&display=swap");
+
+:root {
+  --color-white: #fff;
+  --color-black: #000;
+  --color-blue: #3543c3;
+  --color-blueLight: #5a64c0;
+}
+
+body {
+  font-family: "Lato", sans-serif;
+  color: var(--color-blue);
+}
+
+form {
+  & > input {
+    display: block;
+  }
+
+  input {
+    margin-bottom: 12px;
+    border: 1px solid var(--color-blue);
+    border-radius: 3px;
+    height: 20px;
+
+    &:focus-visible {
+      outline-width: 2px;
+      outline-color: var(--color-blue);
+    }
+
+    &[type="submit"] {
+      height: 40px;
+      padding: 12px;
+      border: none;
+      background-color: var(--color-blue);
+      color: var(--color-white);
+      border-radius: 3px;
+
+      &:hover {
+        cursor: pointer;
+        background-color: var(--color-blueLight);
+        transition: 0.5s;
+      }
+    }
+  }
+
+  label {
+    font-size: 12px;
+  }
+}
