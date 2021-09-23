@@ -3,8 +3,13 @@
 :root {
   --color-white: #fff;
   --color-black: #000;
-  --color-blue: #3543c3;
+  --color-blue: #6c77d6;
   --color-blueLight: #5a64c0;
+}
+
+* {
+  padding: 0;
+  margin: 0;
 }
 
 body {
@@ -12,39 +17,62 @@ body {
   color: var(--color-blue);
 }
 
-form {
-  & > input {
-    display: block;
+.register {
+  display: flex;
+  justify-content: center;
+  background-color: rgb(36, 36, 36);
+
+  &__inner {
+    margin: 32px 0;
   }
 
-  input {
-    margin-bottom: 12px;
-    border: 1px solid var(--color-blue);
-    border-radius: 3px;
-    height: 20px;
+  &__hdl {
+    margin-bottom: 24px;
+  }
 
-    &:focus-visible {
-      outline-width: 2px;
-      outline-color: var(--color-blue);
+  form {
+    display: flex;
+    flex-direction: column;
+    width: 500px;
+    & > input {
+      display: block;
     }
 
-    &[type="submit"] {
-      height: 40px;
-      padding: 12px;
-      border: none;
-      background-color: var(--color-blue);
-      color: var(--color-white);
+    input {
+      // margin-bottom: 12px;
+      border: 1px solid var(--color-blue);
       border-radius: 3px;
+      height: 35px;
 
-      &:hover {
-        cursor: pointer;
-        background-color: var(--color-blueLight);
-        transition: 0.5s;
+      &:focus-visible {
+        outline-width: 2px;
+        outline-color: var(--color-blue);
+      }
+
+      &[type="submit"] {
+        height: 40px;
+        padding: 12px;
+        border: none;
+        background-color: var(--color-blue);
+        color: var(--color-white);
+        border-radius: 3px;
+
+        &:hover {
+          cursor: pointer;
+          background-color: var(--color-blueLight);
+          transition: 0.5s;
+        }
+      }
+
+      &:not(:last-child) {
+        margin-bottom: 12px;
+        padding: 0 10px;
       }
     }
-  }
 
-  label {
-    font-size: 12px;
+    label {
+      font-size: 12px;
+      margin-bottom: 4px;
+    }
   }
 }

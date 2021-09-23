@@ -15,9 +15,11 @@
       <li>Absatz 3</li>
     </ul>
 
-    <h2>Formular</h2>
-    <form action="zielseite.html" name="formular">
-      <!-- <input type="text" name="feld1" id="feld1" value="Formularfeld 1" />
+    <div class="register">
+      <div class="register__inner">
+        <form action="zielseite.html" name="formular">
+          <h1 class="register__hdl">Register</h1>
+          <!-- <input type="text" name="feld1" id="feld1" value="Formularfeld 1" />
       <input type="text" name="feld2" value="Formularfeld 2" />
       <input type="checkbox" name="feld3" id="" />
       <select name="" id="auswahl">
@@ -25,14 +27,16 @@
         <option value="auswahl2">Wert2</option>
         <option value="auswahl3">Wert3</option>
       </select> -->
-      <label for="vorname">Vorname</label>
-      <input type="text" name="vorname" />
-      <label for="nachname">Nachname</label>
-      <input type="text" name="nachname" />
-      <label for="email">E-Mail</label>
-      <input type="text" name="email" required />
-      <input type="submit" value="Submit" id="submitBtn" />
-    </form>
+          <label for="vorname">Vorname*</label>
+          <input type="text" name="vorname" required />
+          <label for="nachname">Nachname*</label>
+          <input type="text" name="nachname" required />
+          <label for="email">E-Mail*</label>
+          <input type="text" name="email" required />
+          <input type="submit" value="Submit" id="submitBtn" />
+        </form>
+      </div>
+    </div>
   </body>
   <!-- <script src="../src/js/scripts.js"></script> -->
   <!-- <script src="../src/js/functions.js"></script> -->
