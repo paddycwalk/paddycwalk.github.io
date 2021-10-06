@@ -1,9 +1,11 @@
-@import url("https://fonts.googleapis.com/css2?family=Lato&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Josefin+Sans:ital,wght@0,400;0,700;1,300&display=swap");
 :root {
   --color-white: #fff;
   --color-black: #000;
-  --color-blue: #6c77d6;
-  --color-blueLight: #5a64c0;
+  --color-blue: #e2a025;
+  --color-blueLight: #e2a02598;
+  --color-dark: rgb(29, 29, 29);
+  --color-dark2: rgb(71, 71, 71);
 }
 
 * {
@@ -12,8 +14,9 @@
 }
 
 body {
-  font-family: "Lato", sans-serif;
+  font-family: "Josefin Sans", sans-serif;
   color: var(--color-blue);
+  background-color: var(--color-dark);
 }
 
 .register {
@@ -23,15 +26,17 @@ body {
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
-  background-color: #242424;
 }
 
 .register__inner {
-  margin: 32px 0;
+  background-color: var(--color-dark2);
+  padding: 32px;
+  border-radius: 3px;
 }
 
 .register__hdl {
   margin-bottom: 24px;
+  color: green;
 }
 
 .register form {
@@ -50,9 +55,11 @@ body {
 }
 
 .register form input {
+  background-color: transparent;
   border: 1px solid var(--color-blue);
   border-radius: 3px;
   height: 35px;
+  color: var(--color-white);
 }
 
 .register form input:focus-visible {
@@ -84,5 +91,78 @@ body {
 .register form label {
   font-size: 12px;
   margin-bottom: 4px;
+}
+
+#btnModal {
+  padding: 10px;
+  border-radius: 3px;
+  border: none;
+  background-color: var(--color-blue);
+  color: var(--color-white);
+}
+
+#btnModal:hover {
+  cursor: pointer;
+}
+
+.modal__container {
+  display: none;
+  z-index: 3;
+  padding-top: 100px;
+  position: fixed;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  overflow: auto;
+  background-color: rgba(70, 70, 70, 0.671);
+}
+
+.modal__container--open {
+  display: block;
+}
+
+.modal__content {
+  margin: auto;
+  background-color: #fff;
+  position: relative;
+  padding: 0;
+  outline: 0;
+  width: 600px;
+  padding: 20px;
+}
+
+.modal__content h1 {
+  margin-bottom: 20px;
+}
+
+.modal__close {
+  height: 30px;
+  width: 30px;
+  position: absolute;
+  right: 30px;
+}
+
+.modal__close::before, .modal__close::after {
+  position: absolute;
+  left: 15px;
+  content: " ";
+  height: 33px;
+  width: 2px;
+  background-color: #333;
+}
+
+.modal__close::before {
+  -webkit-transform: rotate(45deg);
+          transform: rotate(45deg);
+}
+
+.modal__close::after {
+  -webkit-transform: rotate(-45deg);
+          transform: rotate(-45deg);
+}
+
+.modal__close:hover {
+  cursor: pointer;
 }
 /*# sourceMappingURL=styles.css.map */

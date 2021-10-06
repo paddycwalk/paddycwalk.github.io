@@ -3,43 +3,64 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="Form" />
     <title>JS Buch Übungen</title>
     <link rel="stylesheet" href="./src/css/styles.css" />
   </head>
   <body>
-    <h1>JS Buch Übungen</h1>
+    <!-- <h1>JS Buch Übungen</h1>
     <button id="button">Button</button>
     <ul id="list">
       <li>Absatz 1</li>
       <li>Absatz 2</li>
       <li>Absatz 3</li>
-    </ul>
+    </ul> -->
 
     <div class="register">
       <div class="register__inner">
         <form action="zielseite.html" name="formular">
-          <h1 class="register__hdl">Register</h1>
-          <!-- <input type="text" name="feld1" id="feld1" value="Formularfeld 1" />
-      <input type="text" name="feld2" value="Formularfeld 2" />
-      <input type="checkbox" name="feld3" id="" />
-      <select name="" id="auswahl">
-        <option value="auswahl1">Wert1</option>
-        <option value="auswahl2">Wert2</option>
-        <option value="auswahl3">Wert3</option>
-      </select> -->
-          <label for="vorname">Vorname*</label>
-          <input type="text" name="vorname" required />
-          <label for="nachname">Nachname*</label>
-          <input type="text" name="nachname" required />
+          <h1 class="register__hdl">Register now!</h1>
+          <input type="text" name="feld1" id="feld1" value="Formularfeld 1" />
+          <input type="text" name="feld2" value="Formularfeld 2" />
+          <input type="checkbox" name="feld3" id="" />
+          <select name="" id="auswahl">
+            <option value="auswahl1">Wert1</option>
+            <option value="auswahl2">Wert2</option>
+            <option value="auswahl3">Wert3</option>
+          </select>
+          <label for="vorname">First Name*</label>
+          <input type="text" name="vorname" required id="vorname" />
+          <label for="nachname">Last Name*</label>
+          <input type="text" name="nachname" required id="nachname" />
           <label for="email">E-Mail*</label>
-          <input type="text" name="email" required />
+          <input type="text" name="email" required id="email" />
           <input type="submit" value="Submit" id="submitBtn" />
         </form>
       </div>
+    </div>
+
+    <button id="btnModal">Open Modal</button>
+    <div class="modal__container">
+      <div class="modal__content">
+        <div class="modal__close"></div>
+        <h1>Modal</h1>
+        <p>
+          Lorem ipsum dolor sit amet consectetur, adipisicing elit. Voluptate
+          distinctio porro accusamus fugiat voluptas at eaque, praesentium quam
+          consequatur omnis ut deleniti placeat repudiandae quo modi magnam
+          nihil quas inventore!
+        </p>
+      </div>
+    </div>
+
+    <div id="demo">
+      <h2>Let AJAX change this text</h2>
+      <button type="button" onclick="loadDoc()">Change Content</button>
     </div>
   </body>
   <!-- <script src="./src/js/scripts.js"></script> -->
   <!-- <script src="./src/js/functions.js"></script> -->
   <!-- <script src="./src/js/events.js"></script> -->
   <script src="./src/js/formulare.js"></script>
+  <!-- <script src="./src/js/schleifen.js"></script> -->
 </html>
